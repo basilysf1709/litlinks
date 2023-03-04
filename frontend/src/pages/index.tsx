@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const Home : React.FC = () : JSX.Element => {
   return (
     <>
       <Head>
@@ -15,6 +15,10 @@ export default function Home() {
       <main>
        <h1>Hello</h1>
       </main>
+
+      <footer>Hello</footer>
     </>
   )
 }
+
+export default Home;
