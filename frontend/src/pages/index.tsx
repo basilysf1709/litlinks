@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Home : React.FC = () : JSX.Element => {
+const Root : React.FC = () : JSX.Element => {
   return (
     <>
       <Head>
@@ -16,9 +16,9 @@ const Home : React.FC = () : JSX.Element => {
        <h1>Hello</h1>
       </main>
 
-      <footer>Hello</footer>
+      <footer>Copyright ©2022 All rights reserved</footer>
     </>
   )
 }
 
-export default Home;
+export default Root;
