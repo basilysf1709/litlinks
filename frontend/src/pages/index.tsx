@@ -17,8 +17,8 @@ const Root: React.FC = (): JSX.Element => {
       <main>
         <Image
           src="/assets/book1.jpg"
-          height={144}
-          width={144}
+          width={200}
+          height={100}
           alt="Book Image"
         />
         <Navbar />
