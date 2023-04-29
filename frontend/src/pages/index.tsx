@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Navbar from '../components/Navbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ const Root: React.FC = (): JSX.Element => {
           width={144}
           alt="Book Image"
         />
+        <Navbar />
       </main>
 
       <footer>Copyright ©2022 All rights reserved</footer>
