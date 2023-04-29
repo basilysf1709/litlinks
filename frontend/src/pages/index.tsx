@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-const Root : React.FC = () : JSX.Element => {
+const Root: React.FC = (): JSX.Element => {
   return (
     <>
       <Head>
@@ -13,12 +14,17 @@ const Root : React.FC = () : JSX.Element => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-       <h1>Hello</h1>
+        <Image
+          src="/assets/book1.jpg"
+          height={144}
+          width={144}
+          alt="Book Image"
+        />
       </main>
 
       <footer>Copyright ©2022 All rights reserved</footer>
     </>
-  )
-}
+  );
+};
 
 export default Root;
