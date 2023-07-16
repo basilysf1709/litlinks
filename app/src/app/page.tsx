@@ -1,8 +1,16 @@
+import Navbar from "@/components/Navbar";
+import UpperLayout from "@/components/UpperLayout";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
     <main>
-      <h2>Hello</h2>
+      <Navbar />
+      <UpperLayout />
+      <Features />
+      <Footer />
     </main>
   )
 }
