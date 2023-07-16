@@ -20,7 +20,7 @@ export default function Footer() {
                   </li>
               </ul>
           </div>
-          <hr className="my-6 border-blue-200 sm:mx-auto dark:border-blue-700 lg:my-8" />
+          <hr className="my-6 border-blue-200 sm:mx-auto lg:my-8" />
           <span className="block text-sm text-blue-900 sm:text-center">© 2023 <Link href="/" className="hover:underline">LitLinks™</Link>. All Rights Reserved.</span>
       </div>
     </footer>
