@@ -69,7 +69,7 @@ export default function Navbar() {
                 </li>
                 <li className="text-white hover:text-blue-500">
                   <Link href="/contact">
-                    Contact US
+                    Contact Us
                   </Link>
                 </li>
               </ul>
