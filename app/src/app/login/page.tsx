@@ -48,6 +48,13 @@ export default function Login() {
     setLoading(false)
   }
 
+  const handleSignUpWithGoogle = async () => {
+    setLoading(true)
+    const res = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+    })
+  }
+
   const handleSignOut = async () => {
     setLoading(true)
     const res = await supabase.auth.signOut()
@@ -84,19 +91,25 @@ export default function Login() {
                               id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required />
                         </div>
                         <div className="flex items-center justify-between">
-                            {/* <div className="flex items-start">
+                            <div className="flex items-start">
                                 <div className="flex items-center h-5">
                                   <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
                                 </div>
                                 <div className="ml-3 text-sm">
                                   <label htmlFor="remember" className="text-gray-500">Remember me</label>
                                 </div>
-                            </div> */}
+                            </div>
                             <a href="#" className="text-sm font-medium text-blue-600 hover:underline">Forgot password?</a>
                         </div>
                         <button onClick={handleSignIn} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
-                        <button onClick={handleSignUp} className="w-full text-white bg-blue-900 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign Up with Email</button>
-                        <button type="button" className="w-full text-white bg-blue-900 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 text-center text-center inline-flex items-center justify-between"><svg className="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>Sign up with Google<div></div></button>
+                        <button onClick={handleSignUp} className="w-full text-white bg-blue-900 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign up with Email</button>
+                        <button onClick={handleSignUpWithGoogle} type="button" className="w-full text-white bg-blue-900 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 text-center text-center inline-flex items-center justify-between">
+                          <svg className="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                            <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
+                          </svg>Sign up with Google
+                          <div>
+                          </div>
+                        </button>
                     </div>
                     
                 </div>
