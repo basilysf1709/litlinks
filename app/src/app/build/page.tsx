@@ -2,7 +2,6 @@
 import React, {useState} from 'react';
 import Navbar from "@/components/Navbar";
 import Booklist from "@/components/Booklist";
-import InputModal from "@/components/InputModal";
 import Footer from "@/components/Footer";
 
 export default function contact() {
@@ -34,7 +33,6 @@ export default function contact() {
         </div> */}
         <Booklist />
         <Booklist />
-        <InputModal />
         <Footer />
     </>)
 }
